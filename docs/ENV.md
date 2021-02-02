@@ -90,7 +90,7 @@ sed -i "s/# export JAVA_HOME=/export JAVA_HOME=\/home\/hadoop\/app\/jdk1.8.0_271
 hadoop000
 ```
 
-### ~~单独启动~~
+首次启动前必须格式化！！！
 
 ``` bash
 $HADOOP_HOME/bin/hdfs namenode -format
@@ -98,6 +98,9 @@ $HADOOP_HOME/bin/hdfs namenode -format
 
 正常的话会有输出：  
 Storage directory /home/hadoop/app/tmp/dfs/name has been successfully formatted.
+
+
+### ~~单独启动~~
 
 ``` bash
 $HADOOP_HOME/sbin/hadoop-daemons.sh start namenode
