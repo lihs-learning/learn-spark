@@ -3,7 +3,7 @@ import sys
 from pyspark import SparkConf, SparkContext
 
 
-def run_wc(sc: SparkContext, ifp: str):
+def run_topn(sc: SparkContext, ifp: str):
     result = sc.textFile(ifp) \
         .map(lambda line: line.split('\t')) \
         .map(lambda col: (col[5], 1)) \
@@ -27,4 +27,4 @@ if __name__ == '__main__':
 
     spark_conf = SparkConf()
     with SparkContext(conf=spark_conf) as spark_context:
-        run_wc(spark_context, in_file_path)
+        run_topn(spark_context, in_file_path)
