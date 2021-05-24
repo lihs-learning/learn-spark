@@ -22,7 +22,7 @@ def word_count(scc: StreamingContext, hostname: str, port: int):
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print("Usage: 11-wc <hostname> <port>", file=sys.stderr)
+        print("Usage: 01-wc-socket <hostname> <port>", file=sys.stderr)
         sys.exit(-1)
 
     h = sys.argv[1]
